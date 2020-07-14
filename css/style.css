@@ -1,0 +1,11 @@
+@import url(./normalize.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  color: #609; 
+  background-color: #fff;
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+}
