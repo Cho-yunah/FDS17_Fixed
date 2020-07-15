@@ -17,7 +17,6 @@ body {
 .container {
   background-color: #ccc;
 }
-
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
   margin: 0 auto;
@@ -33,8 +32,13 @@ body {
 .main {
   background-color:blue;
   padding: 30px 15px;
-  overflow: hidden; 
+  /*  overflow: hidden; */
   min-height: 450px;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
 }
 .group { 
   float: left;
@@ -43,7 +47,6 @@ body {
 }
 .group1 {
   background-color: pink;
-  float: right;
   width: 250px;
 }
 .group2 {
@@ -53,6 +56,9 @@ body {
 .group3 {
   background-color: coral;
   width: 190px;
+}
+.clearfix {
+  clear: both;
 }
 .slogan {
   background-color:orange;
