@@ -78,7 +78,7 @@ a {
 }
 /* 메인 메뉴 */
 .menu {
-  background: #E8510B, linear-gradient(to bottom, #ea9c2e 0%,#db5a23 27%,#db5a23 49%,#db5a23 73%,#db5a23 73%,#ef8c2f 100%);
+  background: #db5a23 linear-gradient(to bottom, #ea9c2e 0%,#db5a23 27%,#db5a23 49%,#db5a23 73%,#db5a23 73%,#ef8c2f 100%);
   padding-left: 225px;
   list-style: none;
   margin: 0 0 50px;
