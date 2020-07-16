@@ -13,6 +13,15 @@ body {
   font-family: 'Spoqa Han Sans';
   font-weight: 400;
 }
+/* 숨김 콘텐츠 */
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
 /* 링크스타일 */
 a {
   text-decoration: none;
@@ -35,12 +44,13 @@ a {
   padding: 0 30px 0 30px; 
   position: relative;
 
+
 }
 /* 로고 */
 .logo {
   position: absolute;
-  top: 45px;
-  left: 65px;
+  top: 25px;
+  left: 60px;
 }
 /* 멤버링크 */
 .member {
@@ -65,6 +75,40 @@ a {
 .member a {
   text-transform: uppercase;
   padding: 2px 8px 2px 3px;
+}
+/* 메인 메뉴 */
+.menu {
+  background: #E8510B, linear-gradient(to bottom, #ea9c2e 0%,#db5a23 27%,#db5a23 49%,#db5a23 73%,#db5a23 73%,#ef8c2f 100%);
+  padding-left: 225px;
+  list-style: none;
+  margin: 0 0 50px;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+}
+/* 메인메뉴의 clearfix */
+.menu::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.menu-item{
+  float: left;
+}
+.btn-menu {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 700;
+  border: 0;
+  border-left: 2px solid rgba(255,255,255,0.5);
+  padding: 15px 20px;
+  cursor: pointer;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+.sub-menu {
+  background-color:pink;
+  position: absolute;
+  display: none;
 }
 .visual {
   background-color:lime;
