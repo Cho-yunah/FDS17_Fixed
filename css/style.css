@@ -1,5 +1,7 @@
 @import url(./normalize.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+/* @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css) */
+@import url(./fontello.css);
 *, *::before, *::after{
   box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ html {
 }
 body {
   font-size: 1.4rem;
-  color: #609; 
+  color: black; 
   background-color: #fff;
   font-family: 'Spoqa Han Sans';
   font-weight: 400;
@@ -31,7 +33,8 @@ a {
 .container {
   background-color: #ccc;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column nowrap; 
+  /*column nowrap 대신 row nowrap으로 할수 있는 방법을 고민해 볼것 */
   align-items: center;
 }
 .header, .visual, .main, .slogan, .footer {
@@ -43,7 +46,6 @@ a {
   border-radius: 0 0 15px 15px;
   padding: 0 30px 0 30px; 
   position: relative;
-
 
 }
 /* 로고 */
@@ -67,7 +69,7 @@ a {
   display: inline-block;
 }
 .member li{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .member [aria-hidden] {
   /* margin: 0 5px; --클릭하는 면적이 줄어들어서 margin 보다는 충분한 면적을 주는 <a>태그를 이용해 padding을 주는 것이 좋다. */
@@ -81,18 +83,20 @@ a {
   background: #db5a23 linear-gradient(to bottom, #ea9c2e 0%,#db5a23 27%,#db5a23 49%,#db5a23 73%,#db5a23 73%,#ef8c2f 100%);
   padding-left: 225px;
   list-style: none;
-  margin: 0 0 50px;
+  margin: 0 0 35px;
   border-top: 2px solid #000;
   border-radius: 0 0 5px 5px;
+  height: 50px;
 }
-/* 메인메뉴의 clearfix */
+/* 메인메뉴의 clearfix
 .menu::after{
   content: "";
   display: block;
   clear: both;
-}
+} */
 .menu-item{
   float: left;
+  position: relative;
 }
 .btn-menu {
   background-color: transparent;
@@ -100,14 +104,72 @@ a {
   font-size: 1.45rem;
   font-weight: 700;
   border: 0;
+  line-height: 48px;
   border-left: 2px solid rgba(255,255,255,0.5);
-  padding: 15px 20px;
+  padding: 0 20px;
   cursor: pointer;
   text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
 }
+.menu-act .btn-menu{
+  color: #ff0;
+}
+.menu-act .btn-menu::after {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 2px;
+  /* 작은 상자가 만들어져서 밑줄효과를 냄 */
+
+  /* border와 같은 효과를 작은 상자로 만들어 비슷한 효과를 낼수 있다. 응용도 상승*/
+}
 .sub-menu {
-  background-color:pink;
   position: absolute;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  white-space: nowrap;
+  /* - 강제적으로 줄바꿈을 막는 효과 */
+}
+.sub-menu li, .sub-menu a {
+  display: inline-block;
+}
+.sub-menu a {
+  padding: 8px 0;
+  margin-right: 1em;
+}
+.sub-menu a::before {
+  content: '\f192';
+  font-family: 'fontello';
+  display: inline-block;
+  width: 1em;
+  margin-right: .2em;
+  margin-left: .2em;
+}
+.sub-menu a:hover::before, .sub-menu a:focus::before {
+  content: '\e800';
+}
+.sub-menu1, .sub-menu2, .sub-menu3 {
+  left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6 {
+  right: 0;
+}
+.sub-menu1 {
+  display: block;
+}
+.sub-menu2 {
+  display: none;
+}
+.sub-menu3 {
+  display: none;
+}
+.sub-menu4 {
+  display: none;
+}
+.sub-menu5 {
+  display: none;
+}
+.sub-menu6 {
   display: none;
 }
 .visual {
