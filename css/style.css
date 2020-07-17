@@ -216,7 +216,7 @@ a {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size:2.4rem;
   width: 500px;
-  animation: textAni 0.5s ease-in-out forwards;
+  animation: textAni 1s ease-in-out forwards;
   /* 박스가 나가면서 가로로 스크롤바가 생기지 않게 하기위해 width를 정해준다 */
 }
 /* 메인 콘텐츠 */
