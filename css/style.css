@@ -31,13 +31,14 @@ a {
 }
 /* 레이아웃 */
 .container {
-  display: flex;
   flex-flow: column nowrap; 
   /*column nowrap 대신 row nowrap으로 할수 있는 방법을 고민해 볼것 */
   align-items: center;
 }
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
+  margin-right: auto;
+  margin-left: auto;
 }
 /* .clearfix [
   clear: both;
@@ -46,7 +47,7 @@ a {
 .header {
   background-color: #fff;
   border-radius: 0 0 15px 15px;
-  padding: 0 30px 0 30px; 
+  padding: 1px 30px; 
   position: relative;
 }
 /* 로고 */
@@ -218,14 +219,14 @@ a {
 .visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size:2.4rem;
-  background-color: yellow;
   width: 500px;
   animation: textAni 1s ease-in-out forwards;
   /* 박스가 나가면서 가로로 스크롤바가 생기지 않게 하기위해 width를 정해준다 */
 }
 /* 메인 콘텐츠 */
 .main {
-  background-color:blue;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
   min-height: 450px;
   padding: 30px;
   display: flex;
@@ -340,12 +341,14 @@ a {
 }
 .validation-list li{
   /* .validation-list a 요소를 사용하려면 display: block 처리를 해줘야 한다.*/
+  /* display: block; */
   margin-top: 10px;
   padding: 8px 10px 8px 45px;
+  /* text-indent: 50px; */
   border: 1px solid #aaa;
   border-radius: 20px;
   background-color: #ccc;
-  background-image: url(./images/validation_icon.png), repeating-linear-gradient(180deg, #ccc, #eee);
+  background-image: url(./images/validation_icon.png), linear-gradient(180deg, #ccc, #eee);
   background-repeat: no-repeat, repeat;
   background-position: 15px 50%, 0 0;
   font-weight: 400;
@@ -353,7 +356,52 @@ a {
 .validation-list a:hover {
   color: #f00;
 }
-  /* 패딩값 대신 text-indent를 사용해도 된다. padding 없이 line-height로 할수 있다./
+  /* 패딩값 대신 text-indent를 사용해도 된다. padding 없이 line-height로 할수 있다.*/
+/* 웹관련용어 */
+.term {
+  background-image: linear-gradient(180deg, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+  /* min-height: 200px; */
+} 
+.term-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.term-list{
+  margin: 0;
+}
+.term-list > div{
+  margin-top: 10px;
+}
+.term-list > div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.term-list-subject {
+  color: #296897;
+}
+.term-list-subject, .term-list-brief {
+  float: right;
+  width: 145px;
+}
+.term-list-thumbnail {
+  float: left;
+  margin-left: 0;
+}
+.term-list-brief {
+  margin-left: 0;
+}
+.even >.term-list-subject, .even >.term-list-brief{
+  float: left;
+}
+.even >.term-list-thumbnail {
+  float: right;
 }
 
 /* 슬로건 */
