@@ -450,6 +450,34 @@ a {
   height: 24px;
   padding: 0 10px;
 }
+/* 공지사항 및 자료실 */
+.board {
+
+}
+.noticetab-act {
+  /* background-color: yellow; */
+}
+.notice-heading .tab {
+  border: 2px solid red;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #fff;
+}
+.notice-list {
+  padding: 0;
+}
+.notice-list >li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 10px;
+
+}
+.notice-list time{
+
+}
+.noticetab-act a{ 
+  
+}
 /* 슬로건 */
 .slogan {
   background-color:orange;
