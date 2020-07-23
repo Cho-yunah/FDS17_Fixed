@@ -130,6 +130,10 @@ a {
   list-style: none;
   white-space: nowrap;
   /* - 강제적으로 줄바꿈을 막는 효과 */
+  display: none;
+}
+.menu-act .sub-menu {
+  display: block;
 }
 .sub-menu li, .sub-menu a {
   display: inline-block;
@@ -157,24 +161,6 @@ a {
 }
 .sub-menu4, .sub-menu5, .sub-menu6 {
   right: 0;
-}
-.sub-menu1 {
-  display: block;
-}
-.sub-menu2 {
-  display: none;
-}
-.sub-menu3 {
-  display: none;
-}
-.sub-menu4 {
-  display: none;
-}
-.sub-menu5 {
-  display: none;
-}
-.sub-menu6 {
-  display: none;
 }
 /* 비주얼 */
 @keyframes textAni {
@@ -452,18 +438,24 @@ a {
 }
 /* 공지사항 및 자료실 */
 .board {
-  background-color: yellow;
   position: relative;
   margin-top: 20px;
-  min-height: 180px;
+  padding-top: 45px;
 }
 .notice-heading, .pds-heading {
   background-color: pink;
-  float: left;
   margin: 0;
   font-size: 1.4rem;
   font-weight: 400;
   /* h2번 요소때문에 필요해지 font 코드 */
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 73px;
 }
 .tab {
   display: block;
@@ -486,17 +478,12 @@ a {
   display: block;
 }
 .notice-list, .pds-list {
-  background-color: silver;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  position: absolute;
-  top: 45px;
-  left: 0;
-  width: 100%;
+  min-height: 130px;
 }
 .notice-list li, .pds-list li{
-  background-color: orange;
   margin-bottom: 10px;
   /* a와 time이 float되면서 높이를 잃어버림 */
 }
@@ -507,7 +494,6 @@ a {
   /* li에 아이콘을 넣으려고 하면 아이콘까지 플로트를 시켜야 한다. */
 }
 .notice-list a, .pds-list a {
-  background-color: skyblue;
   float: left;
   width: 300px;
   text-overflow: ellipsis;
@@ -524,7 +510,6 @@ a {
   color: #000
 }
 .notice-list time, .pds-list time {
-  background-color: violet;
   float: right;
 }
 .notice-more, .pds-more {
@@ -614,7 +599,17 @@ a {
 .pds-more{
   position: absolute;
   top: 0;
-  right: 10px; */ */
+  right: 10px;
+} */
+/* 새소식 */
+.news {
+
+}
+.new-heading {
+
+}
+.new-content {
+  
 }
 /* 슬로건 */
 .slogan {
