@@ -452,31 +452,169 @@ a {
 }
 /* 공지사항 및 자료실 */
 .board {
-
+  background-color: yellow;
+  position: relative;
+  margin-top: 20px;
+  min-height: 180px;
 }
-.noticetab-act {
-  /* background-color: yellow; */
+.notice-heading, .pds-heading {
+  background-color: pink;
+  float: left;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  /* h2번 요소때문에 필요해지 font 코드 */
+}
+.tab {
+  display: block;
+  color: #666;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+.tab-act .tab {
+  color: #db5629;
+  border-color:#db5629 #db5629 #fff #db5629;
+  background: #fff
+}
+.notice-list, .pds-list, .notice-more, .pds-list {
+  display: none;
+  /* 없는 것을 짠하고 나타나게 하는것 */
+}
+.tab-act .notice-list, .tab-act .pds-list, .tab-act .notice-more, .tab-act .pds-list {
+  display: block;
+}
+.notice-list, .pds-list {
+  background-color: silver;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+}
+.notice-list li, .pds-list li{
+  background-color: orange;
+  margin-bottom: 10px;
+  /* a와 time이 float되면서 높이를 잃어버림 */
+}
+.notice-list li::after, .pds-list li::after{
+  content:"";
+  display: block;
+  clear: both;
+  /* li에 아이콘을 넣으려고 하면 아이콘까지 플로트를 시켜야 한다. */
+}
+.notice-list a, .pds-list a {
+  background-color: skyblue;
+  float: left;
+  width: 300px;
+  text-overflow: ellipsis;
+  /* 말줄임표 역할을 해줌, 단독으로 쓰일수 없다. */
+  overflow: hidden;
+  white-space: nowrap;
+  /* 줄바꿈을 막는 white-space가 필요하다 */
+}
+.notice-list a::before, .pds-list a::before {
+  content: '\f192';
+  font-family: 'fontello';
+  display: inline-block;
+  margin-right: .2em;
+  color: #000
+}
+.notice-list time, .pds-list time {
+  background-color: violet;
+  float: right;
+}
+.notice-more, .pds-more {
+  /* background-color:lime; */
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+.icon-plus::before {
+  color: hsla(110, 70%, 50%, 1);
+  /* 좀더 직관적으로 색을 이해할수 있는 속성 hsla * h값에 따라 무슨 색인지 유추가 가능하다. */
+}
+
+/* .notice.tab-act {
+  padding: 0;
+  margin: 0;
+  background-color: yellow;
+}
+.pds {
+  padding: 0;
+  margin: 0;
+  background-color:pink;
+}
+.notice-heading.notice-more {
+  margin-bottom: 5px;
 }
 .notice-heading .tab {
   border: 2px solid red;
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid #fff;
+  font-size: 1.6rem;
+  padding: 3px;
+  margin: 0;
+  background-color: lightgreen;
+  position: absolute;
 }
+.pds-heading .tab {
+  border: 2px solid red;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1.6rem;
+  padding: 3px;
+  margin: 0;
+  background-color: lightgreen;
+  position: absolute;
+  top:0;
+  left: 70px;
+}
+.notice-heading.pds-heading::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .notice-list {
-  padding: 0;
-}
-.notice-list >li {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  padding: 0 10px;
-
-}
-.notice-list time{
-
-}
-.noticetab-act a{ 
+  padding: 30px 10px 10px;
+  margin: 0;
   
+}
+.pds-list {
+  padding: 30px 10px 10px;
+  margin: 0;
+  
+}
+.notice-list >li, .pds-list >li {
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; */
+  /* padding: 5px 10px;
+  overflow: hidden;
+}
+.notice-list >li >time{
+  float: right;
+}
+.notice-list >a{ 
+  float: left;
+  text-align:center; 
+  word-break:break-all;
+  background-color: lightblue;
+}
+.notice-more{
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.pds-more{
+  position: absolute;
+  top: 0;
+  right: 10px; */ */
 }
 /* 슬로건 */
 .slogan {
