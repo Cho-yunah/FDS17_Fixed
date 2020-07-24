@@ -228,7 +228,6 @@ a {
   width: 380px;
 }
 .group3 {
-  background-color: coral;
   width: 190px;
 }
 /* 로그인 */
@@ -470,7 +469,7 @@ a {
   border-color:#db5629 #db5629 #fff #db5629;
   background: #fff
 }
-.notice-list, .pds-list, .notice-more, .pds-list {
+.notice-list, .pds-list, .notice-more, .pds-more {
   display: none;
   /* 없는 것을 짠하고 나타나게 하는것 */
 }
@@ -507,7 +506,7 @@ a {
   font-family: 'fontello';
   display: inline-block;
   margin-right: .2em;
-  color: #000
+  color: #000;
 }
 .notice-list time, .pds-list time {
   float: right;
@@ -601,16 +600,169 @@ a {
   top: 0;
   right: 10px;
 } */
+
 /* 새소식 */
 .news {
+  margin-top: 20px;
+  position: relative;
+}
+.news::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(90deg, #aaa, #fff );
+}
+.news-heading{
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #db5629;
+}
+.news-item {
+  margin-top: 30px;
+  padding-left: 130px;
+  position: relative;
+}
+.news-item-subject {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.news-item-brief {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.news-item-thumbnail {
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  text-align: center;
+}
+.news-item-thumbnail img {
+  margin-bottom: 15px;
+  box-shadow: 0 15px 20px 2px #ccc;
+}
+.news-more {
+  position: absolute;
+  padding: 8px;
+  top: -8px;
+  right: -8px;
+}
+/* 신규 이벤트  및 관련 사이트*/
+.gradient-box {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+/* 신규이벤트 */
+/* .btn-wrap {
+  background-color: yellow;
+  height: 18px;
 
 }
-.new-heading {
+.btn-prev, .btn-next{
+  background: #ccc url(./images/back_forward.png) no-repeat;
+  background-color: skyblue;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat; 
+  클래스 선택자를 쓰지 않고 버튼wrap으로 한번에 잡아서 주면, 속성 속기법을 썼을때 원하던 결과가 나오지 않을 수 있다.
+  width: 19px;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+  padding: 18px 0 0 0;
+  cursor: pointer;
+}
+.btn-next {
+  background-position: -35px 0;
+} */
+.event {
+  background-color: yellow;
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+.event-heading {
+  font-size: 1.6rem;
+}
+.event-heading span {
+  color: #db5629;
+  margin: 0;
+}
+.event-thumbnail, .event-brief {
+  margin: 10px 0;
+}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #999;
+}
+.event-brief em {
+  font-style: normal;
+}
+.btn-wrap {
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-prev, .btn-next {
+  background-color: #ccc;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.btn-next {
+  background-position:-35px 0;
+}
+/* .gradient-box {
+  background: #ccc linear-gradient(180deg, #ccc, #fff );
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.event {
+  position: relative;
+}
+.event-heading {
 
 }
-.new-content {
-  
+.event-heading >span {
+  color: #db5926;
 }
+.eventDetail {
+
+}
+.event-thumbnail >img{
+  box-shadow: 5px 5px 0 0 gray;
+}
+.event-brief {
+  border-bottom: #ccc;
+}
+.btn-wrap {
+  position: absolute;
+  position: right;
+  top: 0;
+  right: 0;
+}
+.btn-prev, .btn-next {
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+  text-indent: -999px;
+  width: 19px;
+  height: 18px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+} */
+
 /* 슬로건 */
 .slogan {
   background-color:orange;
