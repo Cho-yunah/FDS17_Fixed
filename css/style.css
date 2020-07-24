@@ -524,84 +524,6 @@ a {
   /* 좀더 직관적으로 색을 이해할수 있는 속성 hsla * h값에 따라 무슨 색인지 유추가 가능하다. */
 }
 
-/* .notice.tab-act {
-  padding: 0;
-  margin: 0;
-  background-color: yellow;
-}
-.pds {
-  padding: 0;
-  margin: 0;
-  background-color:pink;
-}
-.notice-heading.notice-more {
-  margin-bottom: 5px;
-}
-.notice-heading .tab {
-  border: 2px solid red;
-  border-radius: 5px 5px 0 0;
-  border-bottom: 1px solid #fff;
-  font-size: 1.6rem;
-  padding: 3px;
-  margin: 0;
-  background-color: lightgreen;
-  position: absolute;
-}
-.pds-heading .tab {
-  border: 2px solid red;
-  border-radius: 5px 5px 0 0;
-  border-bottom: 1px solid #fff;
-  font-size: 1.6rem;
-  padding: 3px;
-  margin: 0;
-  background-color: lightgreen;
-  position: absolute;
-  top:0;
-  left: 70px;
-}
-.notice-heading.pds-heading::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.notice-list {
-  padding: 30px 10px 10px;
-  margin: 0;
-  
-}
-.pds-list {
-  padding: 30px 10px 10px;
-  margin: 0;
-  
-}
-.notice-list >li, .pds-list >li {
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap; */
-  /* padding: 5px 10px;
-  overflow: hidden;
-}
-.notice-list >li >time{
-  float: right;
-}
-.notice-list >a{ 
-  float: left;
-  text-align:center; 
-  word-break:break-all;
-  background-color: lightblue;
-}
-.notice-more{
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
-.pds-more{
-  position: absolute;
-  top: 0;
-  right: 10px;
-} */
-
 /* 새소식 */
 .news {
   margin-top: 20px;
@@ -652,25 +574,24 @@ a {
   top: -8px;
   right: -8px;
 }
-/* 신규 이벤트  및 관련 사이트*/
+/* 신규 이벤트  및 관련 사이트, 인기사이트*/
 .gradient-box {
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px;
   background: #ccc linear-gradient(180deg, #ccc, #eee);
 }
+.event-heading, .related-heading, .favorite-heading {
+  font-size: 1.6rem;
+  margin:0;
+}
+.event-heading span, .related-heading span, .favorite-heading {
+  color: #db5629;
+}
 /* 신규이벤트 */
 .event {
   border-bottom: 1px solid #aaa;
   position: relative;
-}
-.event-heading, .related-heading {
-  font-size: 1.6rem;
-  margin:0;
-}
-.event-heading span, .related-heading span {
-  color: #db5629;
-  margin: 0;
 }
 .event-thumbnail, .event-brief {
   margin: 10px 0;
@@ -769,8 +690,74 @@ a {
   line-height: 21px;
   text-indent: 1em;
 }
+/* 인기 사이트 */
+.group3 .gradient-box:nth-child(2) {
+  margin-top: 20px;
+}
+.favorite {
+  position: relative;
+}
+.favorite-list {
+  margin: 10px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+/* .favorite-list li {
+  counter-increment: number;
+  margin-top: 5px;
+  background-color: violet;
+  position: relative;
+} */
+.favorite-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  counter-increment: number;
+  margin-top: 5px;
+}
 
-
+.favorite-list li::before {
+  content: counter(number);
+  padding: 2px 5px;
+  color: #fff;
+  background-color: #aaa;
+  border-radius: 2px;
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+.favorite-list a {
+  flex-grow: 1;
+}
+.up, .down, .stop {
+  background-image: url(./images/rank.png);
+  background-repeat:no-repeat;
+  /* display: inline-block; */
+  font-style: normal;
+  width: 9px;
+  height: 11px;
+  padding-top: 11px;
+  overflow: hidden;
+  /* position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -5px; */
+  /* 라인하이트의 중앙으로 화살표 이미지를 끌어올리기 위해 음수마진 사용 */
+}
+.up {
+  background-position: 0 0;
+}
+.stop {
+  background-position: 0 50%;
+}
+.down {
+  background-position: 0 100%;
+}
+.favorite-more {
+  position: absolute;
+  padding: 8px;
+  top: -8px;
+  right: -8px;
+}
 /* 슬로건 */
 .slogan {
   background-color:orange;
