@@ -660,35 +660,15 @@ a {
   background: #ccc linear-gradient(180deg, #ccc, #eee);
 }
 /* 신규이벤트 */
-/* .btn-wrap {
-  background-color: yellow;
-  height: 18px;
-
-}
-.btn-prev, .btn-next{
-  background: #ccc url(./images/back_forward.png) no-repeat;
-  background-color: skyblue;
-  background-image: url(./images/back_forward.png);
-  background-repeat: no-repeat; 
-  클래스 선택자를 쓰지 않고 버튼wrap으로 한번에 잡아서 주면, 속성 속기법을 썼을때 원하던 결과가 나오지 않을 수 있다.
-  width: 19px;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-  padding: 18px 0 0 0;
-  cursor: pointer;
-}
-.btn-next {
-  background-position: -35px 0;
-} */
 .event {
   border-bottom: 1px solid #aaa;
   position: relative;
 }
-.event-heading {
+.event-heading, .related-heading {
   font-size: 1.6rem;
+  margin:0;
 }
-.event-heading span {
+.event-heading span, .related-heading span {
   color: #db5629;
   margin: 0;
 }
@@ -762,6 +742,34 @@ a {
   border: 0;
   padding: 0;
 } */
+/* 관련 사이트 */
+.related {
+  margin-top: 10px;
+}
+.related-list {
+  background-color: #fff;
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0 0;
+  height: 27px;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transition: all 200ms;
+}
+.related-list:hover {
+  height: 147px;
+  padding: 10px 0;
+}
+.related-list li {
+  padding: 2px 5px;
+}
+.related-list a {
+  display: block;
+  line-height: 21px;
+  text-indent: 1em;
+}
+
 
 /* 슬로건 */
 .slogan {
