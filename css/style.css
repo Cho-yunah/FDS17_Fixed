@@ -23,6 +23,8 @@ body {
   overflow: hidden;
   margin: -1px;
   clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0 0 0 0);
+  clip: rect(0,0,0,0);
 }
 /* 링크스타일 */
 a {
@@ -442,7 +444,6 @@ a {
   padding-top: 45px;
 }
 .notice-heading, .pds-heading {
-  background-color: pink;
   margin: 0;
   font-size: 1.4rem;
   font-weight: 400;
@@ -681,7 +682,6 @@ a {
   background-position: -35px 0;
 } */
 .event {
-  background-color: yellow;
   border-bottom: 1px solid #aaa;
   position: relative;
 }
@@ -703,7 +703,6 @@ a {
   font-style: normal;
 }
 .btn-wrap {
-  background-color: pink;
   position: absolute;
   top: 0;
   right: 0;
@@ -717,6 +716,7 @@ a {
   border: 0;
   padding: 0;
   cursor: pointer;
+  vertical-align: top;
 }
 .btn-next {
   background-position:-35px 0;
