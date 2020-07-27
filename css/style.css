@@ -196,11 +196,11 @@ a {
   background-repeat: no-repeat;
 }
 .visual::before {
-  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_03.png);
   background-position: 0 -10px, 670px 0;
 }
 .visual::after {
-  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+  background-image: url(./images/ani_flower_02.png), url(./images/ani_flower_04.png);
   background-position: 800px -0, 300px 20px;
   animation-delay: 1s;
 }
@@ -776,6 +776,7 @@ a {
   align-items: center;
   font-size: 1.4rem;
   font-weight: 400;
+  z-index: 1;
 }
 .slogan-heading::after {
   content: "";
@@ -804,12 +805,57 @@ a {
   content:none;
 }
 .footer-bg {
-  background-color:purple;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .footer {
-  background-color:skyblue;
+  padding: 0 100px 0 170px;
+  position: relative;
+  /* margin: 10px 10px 10px 40px; */
+}
+/* 푸터로고 */
+.footer-logo {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+/* 가이드 링크 */
+.guide-list {
+  margin: 0;
+  padding: 4px 20px;
+  background-color: #7b8385;
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 10px;
+  justify-content: space-between;
+  list-style: none;
+}
+.guide-list a{
+  display: block;
+  padding: 6px 15px;
+  text-transform: uppercase;
+}
+/* 주소 및 연락처 */
+.address {
+  font-style: normal;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.address span {
+}
+/* 저작권 */
+.copyright {
+  font-size: 1.4rem;
+  display: block;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
